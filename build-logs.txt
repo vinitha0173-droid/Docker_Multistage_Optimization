@@ -1,10 +1,10 @@
                                                    DOCKER BUILD AND TEST REPORT
 
-**Project**: Multi-Stage Docker Containerization & Optimization
+Project: Multi-Stage Docker Containerization & Optimization
 
-**CI Platform**: GitHub Actions
+CI Platform: GitHub Actions
 
-**Workflow Status**: Successful
+Workflow Status: Successful
 
 Build Results:
 
