@@ -1,4 +1,4 @@
-MULTI-STAGE DOCKER CONTAINERIZATION & OPTIMIZATION:
+                                            MULTI-STAGE DOCKER CONTAINERIZATION & OPTIMIZATION:
 
 Project Overview:
 
@@ -7,17 +7,25 @@ This project demonstrates Docker-based containerization of a Python web applicat
 Key Features:
 
 ->Multi-stage Docker build for a lightweight image
+
 ->Non-root user for improved container security
+
 ->Docker Compose for application and database orchestration
+
 ->Application and database health checks
+
 ->Persistent PostgreSQL storage
+
 ->.dockerignore for build optimization
 
 Project Files:
 
 -Dockerfileapp.py
+
 -requirements.txt
+
 -docker-compose.yml
+
 -.dockerignore
 
 How to Run:
