@@ -1,4 +1,4 @@
-                                            **MULTI-STAGE DOCKER CONTAINERIZATION & OPTIMIZATION**:
+                                            MULTI-STAGE DOCKER CONTAINERIZATION & OPTIMIZATION
 
 **Project Overview**:
 
