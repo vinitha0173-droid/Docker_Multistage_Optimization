@@ -1,0 +1,35 @@
+name: Docker Build and Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t docker-web-app .
+
+      - name: Run container
+        run: |
+          docker run -d --name test-web-app -p 8000:8000 docker-web-app
+          sleep 3
+
+      - name: Test application health
+        run: |
+          python -c "import urllib.request; print(urllib.request.urlopen('http://localhost:8000/health').read().decode())"
+
+      - name: Show container logs
+        if: always()
+        run: docker logs test-web-app || true
+
+      - name: Cleanup
+        if: always()
+        run: docker rm -f test-web-app || true
