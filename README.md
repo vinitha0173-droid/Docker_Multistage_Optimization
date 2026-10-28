@@ -1,9 +1,11 @@
 MULTI-STAGE DOCKER CONTAINERIZATION & OPTIMIZATION:
 
 Project Overview:
+
 This project demonstrates Docker-based containerization of a Python web application using a multi-stage build. Docker Compose is used to manage the web application and PostgreSQL database.
 
 Key Features:
+
 ->Multi-stage Docker build for a lightweight image
 ->Non-root user for improved container security
 ->Docker Compose for application and database orchestration
@@ -12,6 +14,7 @@ Key Features:
 ->.dockerignore for build optimization
 
 Project Files:
+
 -Dockerfileapp.py
 -requirements.txt
 -docker-compose.yml
