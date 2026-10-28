@@ -64,8 +64,13 @@ The application runs as a non-root user. Replace the example database password w
 
 **Testing Status**:
 
-The build, health checks, and database persistence must be tested in a Docker-enabled environment before marking the project as complete.
+->Docker image build: Passed in GitHub Actions
 
+->Application health endpoint: Passed in GitHub Actions
+
+->Docker Compose with PostgreSQL: Configuration added; separate runtime testing is pending.
+
+->Image size target (under 150 MB): Not yet verified.
 
 **Conclusion**:
 
