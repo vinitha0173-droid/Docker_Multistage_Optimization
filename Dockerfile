@@ -1,16 +1,17 @@
-# Stage 1: Install dependencies
-FROM python:3.12-slim AS builder
+# Stage 1: Build dependencies
+FROM python:3.12-alpine AS builder
 
 WORKDIR /app
 COPY requirements.txt .
-RUN mkdir -p /install && pip install --no-cache-dir --prefix=/install -r requirements.txt
+RUN mkdir -p /install \
+    && pip install --no-cache-dir --prefix=/install -r requirements.txt
 
-# Stage 2: Create the runtime image
-FROM python:3.12-slim AS runtime
+# Stage 2: Lightweight runtime
+FROM python:3.12-alpine AS runtime
 
 WORKDIR /app
 
-RUN useradd --create-home appuser
+RUN adduser -D appuser
 
 COPY --from=builder /install /usr/local
 COPY app.py .
